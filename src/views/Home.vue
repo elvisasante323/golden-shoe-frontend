@@ -4,7 +4,9 @@
 
     <carousel />
 
-    <about class="mt-5" />
+    <about id="about-spacer" />
+
+    <products id="products-spacer" />
   </div>
 </template>
 
@@ -12,13 +14,21 @@
 import NavigationBar from "../components/NavigationBar";
 import Carousel from "../components/Carousel";
 import About from "../views/About";
+import Products from "../components/Products";
 
 export default {
   name: "Home",
   components: {
     NavigationBar,
     Carousel,
-    About
+    About,
+    Products
   },
 };
 </script>
+
+<style>
+#about-spacer {
+  margin-bottom: 10em;
+}
+</style>

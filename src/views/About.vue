@@ -1,8 +1,20 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>Welcome To Golden Shoe!</h1>
+    <div class="row mt-4">
+      <div class="col-sm-12">
+        <b-img
+            center
+            :src="require('../assets/logo-2.png')"
+            width="150"
+            height="150"
+            alt="Logo">
+        </b-img>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-sm-6 text-center">
+        <h3>Welcome To Golden Shoe!</h3>
         <p>
           Quibusdam perspiciatis pariatur magnam ducimus excepturi error libero provident animi laboriosam maiores ad
           explicabo ea laudantium nostrum dolor distinctio, quas fugiat doloribus, sit, possimus obcaecati ab quo vel
@@ -13,6 +25,8 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esse numquam blanditis quos, fuga, aspernatur doloribus
           expedita, soluta dolore cumque
         </p>
+
+        <b-button size="lg" variant="outline-primary">View Our Products</b-button>
       </div>
 
       <div class="col-sm-6">

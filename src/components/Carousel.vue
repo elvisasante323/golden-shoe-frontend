@@ -39,5 +39,4 @@ export default {
   position: relative;
   bottom: 25em;
 }
-
 </style>
