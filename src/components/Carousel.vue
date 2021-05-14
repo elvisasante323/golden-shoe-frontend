@@ -6,7 +6,7 @@
   fade
   controls
   img-width="1024"
-  img-height="480"
+  img-height="180"
   no-wrap
   >
     <b-carousel-slide :img-src="require('../assets/trainer-1.png')">

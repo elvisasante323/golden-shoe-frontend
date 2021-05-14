@@ -1,5 +1,48 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Welcome To Golden Shoe!</h1>
+        <p>
+          Quibusdam perspiciatis pariatur magnam ducimus excepturi error libero provident animi laboriosam maiores ad
+          explicabo ea laudantium nostrum dolor distinctio, quas fugiat doloribus, sit, possimus obcaecati ab quo vel
+          commodi eum. Laudantium libero, voluptate rerum sunct hic.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esse numquam blanditis quos, fuga, aspernatur doloribus
+          expedita, soluta dolore cumque
+        </p>
+      </div>
+
+      <div class="col-sm-6">
+        <b-img
+            id="about-img"
+            center
+            :src="require('../assets/trainer-3.png')"
+            width="330"
+            height="250"
+            alt="Trainer">
+        </b-img>
+      </div>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "About"
+}
+</script>
+<style scoped>
+#about-img {
+  padding-top: 2em;
+}
+
+@media (max-width: 375px) {
+  img {
+    width: 230px;
+    height: 150px;
+  }
+}
+</style>
