@@ -47,4 +47,11 @@ export default {
     margin-right: 0;
   }
 }
+
+@media (max-width: 414px) {
+  .navbar-brand {
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+}
 </style>

@@ -31,4 +31,10 @@ export default {
 #about-spacer {
   margin-bottom: 10em;
 }
+
+@media (max-width: 768px) {
+  #about-spacer {
+    margin-bottom: 5em;
+  }
+}
 </style>
