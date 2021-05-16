@@ -26,7 +26,7 @@
           expedita, soluta dolore cumque
         </p>
 
-        <b-button size="md" variant="outline-primary">View Our Products</b-button>
+        <b-button size="md" variant="outline-secondary">View Our Products</b-button>
       </div>
 
       <div class="col-sm-6">

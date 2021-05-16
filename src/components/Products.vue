@@ -18,7 +18,7 @@
             When adventure calls, take the Parva Rucksack with you. Exploring cities wandering the globe.
           </p>
 
-          <b-button size="lg" variant="outline-primary">Add to Cart</b-button>
+          <b-button size="lg" variant="outline-secondary">Add to Cart</b-button>
         </div>
       </b-col>
     </b-row>
@@ -32,7 +32,7 @@
             When adventure calls, take the Parva Rucksack with you. Exploring cities wandering the globe.
           </p>
 
-          <b-button size="lg" variant="outline-primary">Add to Cart</b-button>
+          <b-button size="lg" variant="outline-secondary">Add to Cart</b-button>
         </div>
       </b-col>
 

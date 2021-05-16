@@ -1,7 +1,5 @@
 <template>
   <div id="home">
-    <navigationBar />
-
     <carousel />
 
     <about id="about-spacer" />
@@ -11,7 +9,7 @@
 </template>
 
 <script>
-import NavigationBar from "../components/NavigationBar";
+
 import Carousel from "../components/Carousel";
 import About from "../views/About";
 import Products from "../components/Products";
@@ -19,7 +17,6 @@ import Products from "../components/Products";
 export default {
   name: "Home",
   components: {
-    NavigationBar,
     Carousel,
     About,
     Products

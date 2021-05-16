@@ -7,11 +7,12 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#" active>Home</b-nav-item>
+          <b-nav-item href="/" active>Home</b-nav-item>
           <b-nav-item href="#">About Us</b-nav-item>
           <b-nav-item href="#">Products</b-nav-item>
           <b-nav-item href="#">Contact Us</b-nav-item>
           <b-nav-item href="#" @click="login">Login</b-nav-item>
+          <b-nav-item href="/register">Register</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
