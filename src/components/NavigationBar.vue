@@ -11,32 +11,33 @@
           <b-nav-item href="#">About Us</b-nav-item>
           <b-nav-item href="#">Products</b-nav-item>
           <b-nav-item href="#">Contact Us</b-nav-item>
-          <b-nav-item href="#" @click="login">Login</b-nav-item>
-          <b-nav-item href="/register">Register</b-nav-item>
+          <b-nav-item href="/login" v-if="loggedIn">Login</b-nav-item>
+          <b-nav-item href="/register" v-if="registered">Register</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
 
-    <login v-if="showLogin" />
   </div>
 </template>
 
 <script>
-import Login from "../components/Login";
 
 export default {
   name: "NavigationBar",
-  components: {
-    Login
-  },
   data () {
     return {
-      showLogin: false
+      loggedIn: true,
+      registered: true
     }
   },
-  methods: {
-    login () {
-      this.showLogin = true;
+  mounted () {
+    if (window.localStorage.getItem('registration') === 'complete') {
+      this.registered = false;
+    }
+
+    if (window.localStorage.getItem('userFirstname')) {
+      this.loggedIn = false;
+      this.registered = false;
     }
   }
 }
