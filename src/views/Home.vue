@@ -1,10 +1,14 @@
 <template>
   <div id="home">
-    <carousel />
+    <navigation-bar />
 
-    <about id="about-spacer" />
+    <carousel  />
 
-    <products id="products-spacer" />
+    <about id="about-spacer"  />
+
+    <products id="products-spacer"  />
+
+    <footer-bar />
   </div>
 </template>
 
@@ -13,14 +17,18 @@
 import Carousel from "../components/Carousel";
 import About from "../views/About";
 import Products from "../components/Products";
+import FooterBar from "../components/FooterBar";
+import NavigationBar from "../components/NavigationBar";
 
 export default {
   name: "Home",
   components: {
     Carousel,
     About,
-    Products
-  },
+    Products,
+    FooterBar,
+    NavigationBar
+  }
 };
 </script>
 

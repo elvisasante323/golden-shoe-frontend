@@ -2,6 +2,7 @@ import App from "./App.vue";
 import router from "./router";
 import Vue from 'vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import AxiosPlugin from'vue-axios-cors';
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css';
@@ -14,6 +15,10 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
 Vue.use(axios);
+
+Vue.use(AxiosPlugin);
+
+export const bus = new Vue();
 
 Vue.config.productionTip = false;
 

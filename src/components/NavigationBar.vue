@@ -7,12 +7,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="/" active>Home</b-nav-item>
-          <b-nav-item href="#">About Us</b-nav-item>
-          <b-nav-item href="#">Products</b-nav-item>
-          <b-nav-item href="#">Contact Us</b-nav-item>
-          <b-nav-item href="/login" v-if="loggedIn">Login</b-nav-item>
-          <b-nav-item href="/register" v-if="registered">Register</b-nav-item>
+          <b-nav-item href="/home" active>Home</b-nav-item>
+          <b-nav-item @click="scrollTo('about-spacer')">About Us</b-nav-item>
+          <b-nav-item @click="scrollTo('products-spacer')">Products</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -27,7 +24,19 @@ export default {
   data () {
     return {
       loggedIn: true,
-      registered: true
+      registered: true,
+      numberOfItems: null
+    }
+  },
+  methods: {
+    scrollTo (id) {
+      const element = document.querySelector('#' + id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     }
   },
   mounted () {
@@ -46,7 +55,7 @@ export default {
 <style scoped>
 .navbar-brand {
   margin-left: 5rem;
-  margin-right: 20rem;
+  margin-right: 24rem;
 }
 
 .nav-item {

@@ -26,7 +26,7 @@
           expedita, soluta dolore cumque
         </p>
 
-        <b-button size="md" variant="outline-secondary">View Our Products</b-button>
+        <b-button size="md" variant="outline-secondary" @click="scrollToProductSection">View Our Products</b-button>
       </div>
 
       <div class="col-sm-6">
@@ -45,7 +45,18 @@
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  methods: {
+    scrollToProductSection () {
+      const element = document.querySelector('#products-spacer');
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  }
 }
 </script>
 <style scoped>

@@ -17,7 +17,7 @@
 
     <b-carousel-slide :img-src="require('../assets/trainer-2.png')">
       <b-jumbotron header="With His Sixth Ring, Legend Status is Attained" lead="Only real legends can wear these kicks">
-        <b-button pill variant="outline-light" href="#" size="lg">More Info</b-button>
+        <b-button pill variant="outline-light" href="#" size="lg" @click="scrollToAboutSection">More Info</b-button>
       </b-jumbotron>
     </b-carousel-slide>
   </b-carousel>
@@ -26,6 +26,17 @@
 <script>
 export default {
   name: "Carousel",
+  methods: {
+    scrollToAboutSection () {
+      const element = document.querySelector('#about-spacer');
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  },
   mounted () {
     const srOnly = document.querySelectorAll('.sr-only');
     srOnly[0].innerHTML = '';

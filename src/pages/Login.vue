@@ -20,8 +20,8 @@
 
       <b-container v-if="!loader">
         <b-row>
-          <b-col offset-sm="3">
-            <h1>Login</h1>
+          <b-col offset-md="3" md="6">
+            <h3 class="text-center">Login</h3>
 
             <b-form>
               <b-form-group
@@ -59,6 +59,12 @@
               <b-button variant="outline-secondary" class="mt-3" @click="login">
                 Login
               </b-button>
+
+              <div class="mt-3">
+                <b-button variant="secondary"  @click="register">
+                  Register
+                </b-button>
+              </div>
             </b-form>
           </b-col>
         </b-row>
@@ -71,6 +77,9 @@ import axios from 'axios';
 export default {
   name: "Login",
   methods: {
+    register () {
+      this.$router.push({ name: 'register'});
+    },
     validateEmail (email) {
       const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       this.validEmail = !reg.test(email.toLowerCase());
@@ -86,17 +95,19 @@ export default {
           console.log(response.data);
           this.loader = false;
 
+          window.localStorage.setItem('userId', response.data.id);
           window.localStorage.setItem('userFirstname', response.data.firstName);
           window.localStorage.setItem('userLastname', response.data.lastName);
           window.localStorage.setItem('userAddress', response.data.address);
           window.localStorage.setItem('userPostcode', response.data.postcode);
 
           this.$router.push({
-            name: 'orders'
+            name: 'home'
           });
         }
       }).catch (error => {
         console.log(error);
+        alert('Enter the correct credentials or register to start shopping.');
         this.error = true;
         this.loader = false;
       })
